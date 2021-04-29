@@ -212,10 +212,20 @@ img {
 }
 
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   padding: 200px 0;
-  background-color: #2f303a;
   margin: 0 auto;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img9.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
 }
 
 .hero-button {
