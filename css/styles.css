@@ -5,10 +5,13 @@
   --logo-color: #2196f3;
   --accent-color: #2196f3;
   --icon-color: #afb1b8;
+  --card-border: #eeeeee;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-card: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --back-card: rgba(33, 150, 243, 0.9);
+  --shadow-button: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
   --main-font: Roboto, sans-serif;
   --title-font: Roboto, sans-serif;
@@ -54,16 +57,20 @@ img {
 }
 
 .page-header .container {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  background-color: var(--page-title);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav {
   display: flex;
-  justify-content: center;
+  align-items: baseline;
   margin-right: auto;
 }
 .contacts {
@@ -120,8 +127,6 @@ img {
 
 .menu-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--title-color);
   font-weight: 500;
   text-decoration: none;
@@ -133,10 +138,9 @@ img {
 .menu-link-current {
   position: relative;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--accent-color);
   text-decoration: none;
+  padding-bottom: 45px;
 }
 
 .menu-link-current::after {
@@ -281,12 +285,16 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-color);
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .button:hover,
 .button:focus {
   color: var(--page-title);
   background-color: var(--accent-color);
+  box-shadow: var(--shadow-button);
 }
 
 .page-title {
@@ -327,11 +335,13 @@ img {
 }
 
 .block-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   margin-bottom: 30px;
-  padding: 25px 100px;
   border-radius: 4px;
 }
 
@@ -406,6 +416,10 @@ img {
   text-align: center;
   color: var(--title-color);
   margin-bottom: 8px;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .section-clients {
@@ -505,6 +519,7 @@ img {
 .container-background {
   background-color: var(--page-title);
   padding: 24px 20px;
+  border: 1px solid var(--card-border);
 }
 
 .card-set-item {
