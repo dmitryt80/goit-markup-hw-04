@@ -3,6 +3,7 @@
   --page-title: #ffffff;
   --title-color: #212121;
   --logo-color: #2196f3;
+  --section-background: #f5f4fa;
   --accent-color: #2196f3;
   --icon-color: #afb1b8;
   --card-border: #eeeeee;
@@ -57,11 +58,11 @@ img {
 }
 
 .page-header .container {
-  position: fixed;
   width: 100%;
-  height: 70px;
+  height: 74px;
   z-index: 10;
   background-color: var(--page-title);
+  padding-bottom: 32px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -140,7 +141,6 @@ img {
   display: block;
   color: var(--accent-color);
   text-decoration: none;
-  padding-bottom: 45px;
 }
 
 .menu-link-current::after {
@@ -152,6 +152,7 @@ img {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+  bottom: -35px;
 }
 
 .menu-link:hover,
@@ -378,6 +379,7 @@ img {
 .section-team {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: var(--section-background);
 }
 
 .container-team {
@@ -485,7 +487,6 @@ img {
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
 }
 
 .social-icons-link {
@@ -520,6 +521,10 @@ img {
   background-color: var(--page-title);
   padding: 24px 20px;
   border: 1px solid var(--card-border);
+}
+
+.text-features {
+  color: var(--main-text-color);
 }
 
 .card-set-item {
